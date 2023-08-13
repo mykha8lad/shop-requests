@@ -8,10 +8,10 @@ LEFT JOIN Delivery d ON p.id = d.id_product
 RIGHT JOIN Supplier s ON s.id = d.id_supplier;
 
 -- 3
-SELECT DISTINCT c.name
+SELECT c.name
 FROM Product p LEFT JOIN Category c ON p.id_category = c.id
 EXCEPT
-SELECT DISTINCT c.name
+SELECT c.name
 FROM Product p LEFT JOIN Category c ON p.id_category = c.id
 WHERE c.name = 'Amway'; 
 
